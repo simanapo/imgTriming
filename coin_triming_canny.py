@@ -3,6 +3,7 @@
 import cv2, matplotlib
 import numpy as np
 import matplotlib.pyplot as plt
+a
 
 #画像の読み込み
 coin_name = 'img/8.jpg'
