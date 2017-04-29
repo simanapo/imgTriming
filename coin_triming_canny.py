@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 #画像の読み込み
-coin_name = 'img/205.jpg'
+coin_name = 'img/8.jpg'
 coins = cv2.imread(coin_name)
 
 #グレースケール化
@@ -22,14 +22,15 @@ coins_binary = cv2.Canny(coins_preprocessed, 5, 50)
 #coins_binary1 = cv2.bitwise_not(coins_binary)
 
 #輪郭検出
-coins_contours, _ = cv2.findContours(coins_binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+coins_contours = cv2.findContours(coins_binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
 
 #コピー作成
 coins_and_contours = np.copy(coins)
 
 # 60以上の面積のみ抽出
 min_coin_area = 300
-large_contours = [cnt for cnt in coins_contours if cv2.contourArea(cnt) > min_coin_area]
+large_contours = [cnt for cnt in coins_contours[1] if cv2.contourArea(cnt) > min_coin_area]
 
 # 輪郭エリアを得る
 cv2.drawContours(coins_and_contours, large_contours, -1, (255,0,0), 3)
