@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>antylink's Imgtriming</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/main.js"></script>
+</head>
+<body>
+    <div Align="left">
+        <h2>★★ファイルを選択して下さい★★</h2>
+    </div>
+    <BR>
+    トリミングしたい画像を選択して下さい(.jpgのみ)<BR>
+    <div class="imgInput" Align="left">
+        <form action="/upload" method="post" enctype = "multipart/form-data">
+            <input type="file" name="filename" size="50" id = "inputFileName">
+            <img src="../static/img/noImage.png" alt="" class="imgView">
+            <input type="submit" value="実行">
+        </form>
+    </div>
+</body>
+</html>

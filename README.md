@@ -1,6 +1,6 @@
 # 画像をトリミングするプロジェクト
 
-- python3.5を用いる
+- python3.5（anaconda）を用いる
 - OpenCVが必要
 - pip install -r recuirement.txt
 
