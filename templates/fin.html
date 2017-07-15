@@ -6,7 +6,9 @@
 </head>
 <body>
     <h1>トリミング後</h1>
-    <img src={{img_path}} alt="triming">
+    {% for path in img_paths %}
+        <img src={{path}} alt="triming"><br>
+    {% endfor %}
     <a href={{zip_name}} download="triminged.zip">ダウンロード</a>
 </body>
 </html>

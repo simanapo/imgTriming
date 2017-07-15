@@ -1,0 +1,19 @@
+body {
+    background-color: #fff;
+}
+#drag {
+    margin-bottom: 8px;
+    padding: 24px 0;
+    text-align: center;
+    border: 3px dotted #999;
+}
+.image {
+    padding: 16px;
+    border: 1px solid #eee;
+    margin-bottom: 8px;
+    background-color: #fafafa;
+}
+p {
+    font-size: 14px;
+    margin: 0;
+}
