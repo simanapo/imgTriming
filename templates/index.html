@@ -70,20 +70,4 @@
 <script type="text/javascript" src="http://jsdo.it/lib/jquery-1.10.2/js"></script>
 <!--<script type="text/javascript" src="/static/js/jquery.MultiFile.js"></script>-->
 </body>
-<script type="text/javascript">
-  function checkImg() {
-    var flag = 0;
-
-    if (document.form.image.value === "") {
-      flag = 1;
-
-      if (flag) {
-        window.alert("画像が選択されていません"); // 入力漏れがあれば警告ダイアログを表示
-        return false; // 送信を中止
-      } else {
-        return true; // 送信を実行
-      }
-    }
-  }
-</script>
 </html>
