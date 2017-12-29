@@ -6,4 +6,6 @@ activate
 __pycache__/
 img/*
 imgTrimg.iml/imgTrimg.iml.iml
-static/zip_files/*
+static/zip_files/
+static/upload_file/
+static/triminged/

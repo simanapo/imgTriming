@@ -1,6 +1,6 @@
 from flask import Flask,request
 from flask import render_template
-from coin_triming_canny import Triming
+from coin_triming_canny import Triming, Triming2
 import zipfile
 app = Flask(__name__)
 app.config['DEBUG'] = True
@@ -26,8 +26,8 @@ def upload():
         print(file.filename)
         # ここでいったん保存
         file.save("./static/upload_file/" + file.filename)
-        trimg_class = Triming(file.filename)
-        trimg_class.run_canny()
+        trimg_class = Triming2(file.filename)
+        trimg_class.run()
         paths = './static/triminged/' + file.filename
         path_list.append(paths)
         zipFile.write("./static/triminged/"+file.filename)
